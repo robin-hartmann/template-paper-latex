@@ -21,6 +21,8 @@ Vorlage zum Erstellen von wissenschaftlichen Ausarbeitungen mit LaTeX
     - Automatischer Build bei Änderungen
   - Erweiterungen
 
+## 💡 [Beispiel](../../releases/latest)
+
 ## 🛠️ Verwendung
 
 Folgen Sie diesen Anweisungen, um dieses Projekt auf Ihrem lokalen Rechner einzurichten und es zu verwenden.
