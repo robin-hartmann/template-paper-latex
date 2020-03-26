@@ -1,88 +1,127 @@
-# 📄 template-vscode
+# 📄 template-paper-latex
 
-Template for creating projects with Visual Studio Code
+Vorlage zum Erstellen von wissenschaftlichen Ausarbeitungen mit LaTeX
 
-<img src="docs/images/usage.png" height="550">
+<img src="docs/images/title-page.png" height="550">
 
 ## ⭐ Features
 
-- Settings for Visual Studio Code
-- README template with Emojis 🤩
-- `.gitattributes` for normalizing line endings to `lf`
+- LaTeX-Vorlage
+  - Hilfsbefehle
+  - Layout
+  - Code-Highlighting
+  - Deckblatt
+  - Inhalt
+  - Verzeichnisse
+  - Literaturangaben
+  - Anhang
+- Integration mit Visual Studio Code
+  - Einstellungen
+    - Automatisches Formatieren
+    - Automatischer Build bei Änderungen
+  - Erweiterungen
 
-## 💡 [Examples](docs/examples.md)
+## 🛠️ Verwendung
 
-## ⚡ Deployment
+Folgen Sie diesen Anweisungen, um dieses Projekt auf Ihrem lokalen Rechner einzurichten und es zu verwenden.
 
-These instructions will get you a release of this project up and running on your local machine, so that you can start using it.
+### 📋 Voraussetzungen
 
-### 📋 Prerequisites
+- LaTeX Distribution
+  - bspw. [MiKTeX](https://miktex.org/howto/install-miktex)
+- Perl Distribution
+  - bspw. [ActivePerl](https://www.activestate.com/products/perl/downloads/)
+    - Stellen Sie sicher, dass der Installer den Ordner mit den Executables zum `PATH` hinzufügt
+- [Visual Studio Code](https://code.visualstudio.com/) mit der Erweiterung [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
-- [A GitHub Repository](https://help.github.com/en/github/getting-started-with-github/create-a-repo) - Hosting for the software development version control Git
-  - Or just anything that can render Markdown will do
-  - You could even use this `README.md` directly as a `README.txt`
+### 🚀 Erste Schritte
 
-### 🚀 Getting Started
+| Pfad                  | Inhalt                       | Anmerkung                                                                                                                    |
+| --------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `src/`                | Quellcode des Dokuments      |                                                                                                                              |
+| - `base/`             | Grundlegende Konfigurationen |                                                                                                                              |
+| -- `styles/`          | Styles bzw. Layouts          |                                                                                                                              |
+| --- `listing.tex`     | Style von Listings           | Hier wird Code-Highlighting konfiguriert.                                                                                    |
+| --- `natdin.bst`      | Style von Literaturangaben   |                                                                                                                              |
+| --- `page.tex`        | Style von Seiten             |                                                                                                                              |
+| --- `title.tex`       | Style des Deckblatts         |                                                                                                                              |
+| -- `commands.tex`     | Hilfsbefehle                 | Hier können die verfügbaren Befehle nachgeschlagen werden.                                                                   |
+| -- `packages.tex`     | Verwendete Packages          |                                                                                                                              |
+| - `content/`          | Inhalte der Ausarbeitung     | Hier werden die Inhalte der einzelnen Kapitel abgelegt.                                                                      |
+| - `content-appendix/` | Inhalte für den Anhang       | Hier werden die Inhalte des Anhangs abgelegt.                                                                                |
+| - `images/`           | Bilder                       | Hier werden alle Bilder abgelegt.                                                                                            |
+| - `listings/`         | Quellcode                    | Hier wird jeglicher Quellcode abgelegt.                                                                                      |
+| - `tables/`           | Tabellen                     | Hier werden alle Tabellen abgelegt.                                                                                          |
+| - `acronyms.tex`      | Abkürzungen                  | Hier werden Abkürzungen festgelegt.                                                                                          |
+| - `appendix.tex`      | Anhang                       | Hier wird der Inhalt des Anhangs festgelegt.                                                                                 |
+| - `bibliography.bib`  | Literaturangaben             | Hier wird die verwendete Literatur angegeben.                                                                                |
+| - `content.tex`       | Ausarbeitung                 | Hier wird der Inhalt der Ausarbeitung festgelegt.                                                                            |
+| - `hyphenation.tex`   | Silbentrennung               | Hier werden Regeln für Silbentrennung festgelegt.                                                                            |
+| - `meta.tex`          | Metadaten des Dokuments      | Hier wird hauptsächlichder Inhalt des Deckblatts festgelegt.                                                                 |
+| - `natbib.cfg`        | Style von Literaturangaben   | Diese Datei muss im selben Verzeichnis liegen wie `bibliography.bib`.                                                        |
+| - `root.tex`          | Dokumentenstamm              | Hier wird die Struktur des Dokuments festgelegt und alle Bestandteile geladen.<br>Diese Datei sollte nicht umbenannt werden. |
 
-Just copy all files contained in this repository to whereever you need them.
+Der Build wird automatisch gestartet, wenn eine `.tex`-Datei gespeichert wird. Alternativ kann der Build über `Seitenmenü > LaTeX > Build LaTeX project` gestartet werden. Die erzeugte PDF-Datei wird unter `out/root.pdf` abgelegt. Es wird empfohlen den Dateinamen der PDF-Datei vor Auslieferung entsprechend dem Titel und/oder Untertitel des Dokuments anzupassen. Alle übrigen Dateien und Ordner in `out/` sind temporär und können ohne Bedenken gelöscht werden.
 
-## 📘 [Documentation](docs/docs.md)
+Mehr Informationen und eine Beispieldokumentation auf Basis der zugrundeliegenden Vorlage gibt es [hier](http://fiae.link/LaTeXVorlageFIAE).
 
-## 🛠️ Development
+## 🐞 Troubleshooting
 
-These instructions will get you a copy of this project up and running on your local machine for development and testing purposes.
+### Das Formatieren von `.bib`- und `.tex`-Dateien bricht ab mit dem Fehler `Can't locate Log/Log4perl.pm in @INC`
 
-### 📋 Prerequisites
+Dies bedeutet, dass der verwendete Formatierer `latexindent` nur in Form einer Perl-Executable vorliegt und nicht alle Abhängigkeiten installiert sind. Die einfachste Möglichkeit dies unter Windows zu beheben ist einfach stattdessen die `latexindent.exe` zu verwenden. MiKTeX enthält zwar eine `latexindent.exe`, aber diese leitet Befehle nur zur Perl-Executable weiter. Deswegen müssen die folgenden Schritte durchgeführt werden, um die korrekte `latexindent.exe` zu verwenden:
 
-- [Visual Studio Code](https://code.visualstudio.com/) - Code editor redefined and optimized for building and debugging modern web and cloud applications
+1. MiKTeX Console öffnen
+2. Unter `Packages` das Paket `latexindent` deinstallieren
+3. Eingabeaufforderung öffnen
+4. `where latexindent.exe` ausführen
+5. Falls ein Pfad ausgegeben wird, die Datei unter diesem Pfad löschen
+6. Schritte 3-5 wiederholen, bis kein Pfad mehr ausgegeben wird
+7. Das `latexindent` Paket von [CTAN](https://ctan.org/tex-archive/support/latexindent) herunterladen
+8. Die heruntergeladene Zip-Datei in einen beliebigen Ordner entpacken
+9. Diesen Ordner zum `PATH` hinzufügen
+10. Alle Fenster von VS Code schließen und erneut öffnen
 
-### 🚀 Getting Started
+### Der Build bricht ab
 
-1. Get a copy of this repository
-   - Either by clicking the `Use this template` button next to the `Clone or download` button and creating a new GitHub repository based on this template
-   - Or by clicking the `Clone or download` button and then cloning or just simply downloading the repository
-1. Start editing the repository contents
-   - Either by opening up this `README.md` in your text editor - or, even better, open the whole folder into which you cloned or downloaded this repository
-   - Or - if you're using a GitHub repository - by making the changes directly in the web interface, after you created your own repository based on this template
-1. Rename the `LICENSE` file, so it's clear that is the license for this original repository and keep it in your repository
-   - E.g. name it `LICENSE-template-vscode`
-1. Add your own `LICENSE` file
-1. Add your code and everything else, which is part of your project
-1. Add recommended extensions to `.vscode/extensions.json` under `recommendations`
-   - You need to enter the extension's ID, which you can find by selecting the extension in VSCode's Extension menu and then you'll see it next to the extension's name in the main window
-1. Change the title (`#`) of this README according to your project name and choose a fitting emoji to add to it
-1. Take a screenshot from your project in action and replace `docs/images/usage.png` with it
-1. Edit the sections as you need
-1. Add documentation and examples to `docs/`, if needed
-   - Otherwise remove `docs/docs.md` and `docs/examples.md`, as well as the relevant sections
-1. Remove other sections you don't need
-1. Remove emojis from 3rd-level sections (`###`), if they are too close together (= not a lot of content in the sections) to avoid them getting too distracting
+Öffnen Sie die Ausgabe-Konsole und wechseln Sie zur Ausgabe von `LaTeX Compiler`. Suchen Sie nach `error`. Im Folgenden sind ein paar typische Fehlermeldungen und mögliche Lösungen aufgelistet:
 
-### 🐞 Troubleshooting
+#### `LaTeX fatal error: spawn latexmk ENOENT, . PID: undefined.`
 
-#### Something is not working
+Dies bedeutet, dass LaTeX Workshop nicht die `latexmk`-Executable im `PATH` finden konnte. Schließen Sie alle Fenster von VS Code und öffnen Sie diese erneut. Falls das Problem weiterhin besteht, stellen Sie sicher, dass Sie eine LaTeX Distribution installiert haben und der Ordner mit den entsprechenden Executables im `PATH` enthalten ist.
 
-Do this thing to fix it.
+#### `latexmk: The script engine could not be found.`
 
-## 🧰 Built With
+Dies bedeutet, dass `latexmk` nicht die Perl-Executable im `PATH` finden konnte. Schließen Sie alle Fenster von VS Code und öffnen Sie diese erneut. Falls das Problem weiterhin besteht, stellen Sie sicher, dass Sie eine Perl Distribution installiert haben und der Ordner mit den entsprechenden Executables im `PATH` enthalten ist.
 
-### 📚 Resources
+#### `LaTeX Error: Unknown graphics extension: .svg`
 
-- [EmojiKeyboard](https://emojikeyboard.top/) - Get Emoji by Copy & Paste
+LaTeX unterstützt keine SVG-Dateien. Konvertieren Sie stattdessen die SVG-Datei in eine PDF-Datei.
 
-### 🏛️ Libraries
+### Der erste Build dauert sehr lange
 
-- [Library that was used]() - Short description of the library
+Dies ist normal wenn MiKTeX verwendet wird, denn es müssen erst einmal alle benötigten Pakete heruntergeladen werden. Aber stellen Sie sicher, dass Sie nicht einen Paket-Installations-Dialog von MiKTeX übersehen haben, der immer noch offen ist. In diesem Fall würde der Buildvorgang so lange hängen, wie der Dialog noch offen ist. Und solange Sie nicht MiKTeX erlaubt haben Pakete zu installieren ohne nachzufragen, wird der Dialog jedes mal erneut geöffnet, wenn ein Paket installiert werden muss.
 
-## 👨‍💻 Authors
+### Beim Build werden die Änderungen in einer bestimmten Datei nicht in die PDF-Datei übernommen
+
+Überprüfen Sie, ob der Name der betroffenen Datei Umlaute oder Sonderzeichen enthält und entfernen Sie diese (`_` und `-` sollten kein Problem darstellen). Probieren Sie es danach erneut.
+
+## 🧰 Erstellt Mit
+
+- [LaTeX](https://www.latex-project.org/) - Ein Dokumentaufbereitungssystem
+- [LaTeX-Vorlage zur IHK-Projektdokumentation für Fachinformatiker Anwendungsentwicklung](http://fiae.link/LaTeXVorlageFIAE)
+
+## 👨‍💻 Autoren
 
 - **Robin Hartmann** - [robin-hartmann](https://github.com/robin-hartmann)
-  - _Entire Template_
+  - Überarbeitung der Verzeichnisstruktur
+  - Erweiterung der LaTeX-Vorlage
+  - Integration mit Visual Studio Code
 
-## 📃 License
+## 📃 Lizenz
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Dieses Projekt ist lizenziert unter der `Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International (CC BY-SA 4.0)` Lizenz - siehe [LICENSE.md](LICENSE.md) Datei für Details.
 
-## 👍 Acknowledgments
+## 👍 Danksagungen
 
-- Special thanks to anyone you want to thank and similar things
+- Besonderer Dank an [Stefan Macke](http://fachinformatiker-anwendungsentwicklung.net) für die kostenlose Bereitstellung der diesem Projekt zugrundeliegenden [LaTeX-Vorlage](http://fiae.link/LaTeXVorlageFIAE)

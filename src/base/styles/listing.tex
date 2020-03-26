@@ -1,0 +1,48 @@
+% !TEX root = ../../root.tex
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{custom}{
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  ndkeywordstyle=\color{blue},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  extendedchars=true,
+  keepspaces=true,
+  numbers=left,
+  numbersep=9pt,
+  numberstyle=\footnotesize,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+\lstdefinelanguage{typescript}{
+  keywords={await, break, case, catch, do, else, export, if, import, return, switch, throw, while},
+  ndkeywords={async, class, const, enum, false, function, get, implements, in, let, new, null, private, public, readonly, set, static, this, true, typeof, undefined, var, void},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+  language=[Sharp]C, % Diese Sprache wird verwendet, falls beim Anlegen eines Listings keine angegeben wird
+  % Eine Liste der unterstützten Sprachen lässt sich hier finden:
+  % https://www.overleaf.com/learn/latex/code_listing#Supported_languages
+  % Sprachdialekte werden angegeben mit [<Dialekt>]<Sprache>, bspw. [Sharp]C
+  style=custom
+}
