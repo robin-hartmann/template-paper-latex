@@ -38,30 +38,30 @@ Folgen Sie diesen Anweisungen, um dieses Projekt auf Ihrem lokalen Rechner einzu
 
 ### 🚀 Schnellstart
 
-| Pfad                  | Inhalt                       | Anmerkung                                                                                                                    |
-| --------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `src/`                | Quellcode des Dokuments      |                                                                                                                              |
-| - `base/`             | Grundlegende Konfigurationen |                                                                                                                              |
-| -- `styles/`          | Styles bzw. Layouts          |                                                                                                                              |
-| --- `listing.tex`     | Style von Listings           | Hier wird Code-Highlighting konfiguriert.                                                                                    |
-| --- `natdin.bst`      | Style von Literaturangaben   |                                                                                                                              |
-| --- `page.tex`        | Style von Seiten             |                                                                                                                              |
-| --- `title.tex`       | Style des Deckblatts         |                                                                                                                              |
-| -- `commands.tex`     | Hilfsbefehle                 | Hier können die verfügbaren Befehle nachgeschlagen werden.                                                                   |
-| -- `packages.tex`     | Verwendete Packages          |                                                                                                                              |
-| - `content/`          | Inhalte der Ausarbeitung     | Hier werden die Inhalte der einzelnen Kapitel abgelegt.                                                                      |
-| - `content-appendix/` | Inhalte für den Anhang       | Hier werden die Inhalte des Anhangs abgelegt.                                                                                |
-| - `images/`           | Bilder                       | Hier werden alle Bilder abgelegt.                                                                                            |
-| - `listings/`         | Quellcode                    | Hier wird jeglicher Quellcode abgelegt.                                                                                      |
-| - `tables/`           | Tabellen                     | Hier werden alle Tabellen abgelegt.                                                                                          |
-| - `acronyms.tex`      | Abkürzungen                  | Hier werden Abkürzungen festgelegt.                                                                                          |
-| - `appendix.tex`      | Anhang                       | Hier wird der Inhalt des Anhangs festgelegt.                                                                                 |
-| - `bibliography.bib`  | Literaturangaben             | Hier wird die verwendete Literatur angegeben.                                                                                |
-| - `content.tex`       | Ausarbeitung                 | Hier wird der Inhalt der Ausarbeitung festgelegt.                                                                            |
-| - `hyphenation.tex`   | Silbentrennung               | Hier werden Regeln für Silbentrennung festgelegt.                                                                            |
-| - `meta.tex`          | Metadaten des Dokuments      | Hier wird hauptsächlichder Inhalt des Deckblatts festgelegt.                                                                 |
-| - `natbib.cfg`        | Style von Literaturangaben   | Diese Datei muss im selben Verzeichnis liegen wie `bibliography.bib`.                                                        |
-| - `root.tex`          | Dokumentenstamm              | Hier wird die Struktur des Dokuments festgelegt und alle Bestandteile geladen.<br>Diese Datei sollte nicht umbenannt werden. |
+| Pfad                  | Inhalt                       | Anmerkung                                                                                                                 |
+| --------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `src/`                | Quellcode des Dokuments      |                                                                                                                           |
+| - `base/`             | Grundlegende Konfigurationen |                                                                                                                           |
+| -- `styles/`          | Styles bzw. Layouts          |                                                                                                                           |
+| --- `listing.tex`     | Style von Listings           | Hier wird Code-Highlighting konfiguriert.                                                                                 |
+| --- `natdin.bst`      | Style von Literaturangaben   |                                                                                                                           |
+| --- `page.tex`        | Style von Seiten             |                                                                                                                           |
+| --- `title.tex`       | Style des Deckblatts         |                                                                                                                           |
+| -- `commands.tex`     | Hilfsbefehle                 | Hier können die verfügbaren Befehle nachgeschlagen werden.                                                                |
+| -- `packages.tex`     | Verwendete Packages          |                                                                                                                           |
+| - `content/`          | Inhalte der Ausarbeitung     | Hier werden die Inhalte der einzelnen Kapitel abgelegt.                                                                   |
+| - `content-appendix/` | Inhalte für den Anhang       | Hier werden die Inhalte des Anhangs abgelegt.                                                                             |
+| - `images/`           | Bilder                       | Hier werden alle Bilder abgelegt.                                                                                         |
+| - `listings/`         | Quellcode                    | Hier wird jeglicher Quellcode abgelegt.                                                                                   |
+| - `tables/`           | Tabellen                     | Hier werden alle Tabellen abgelegt.                                                                                       |
+| - `acronyms.tex`      | Abkürzungen                  | Hier werden Abkürzungen festgelegt.                                                                                       |
+| - `appendix.tex`      | Anhang                       | Hier wird der Inhalt des Anhangs festgelegt.                                                                              |
+| - `bibliography.bib`  | Literaturangaben             | Hier wird die verwendete Literatur angegeben.                                                                             |
+| - `content.tex`       | Ausarbeitung                 | Hier wird der Inhalt der Ausarbeitung festgelegt.                                                                         |
+| - `hyphenation.tex`   | Silbentrennung               | Hier werden Regeln für Silbentrennung festgelegt.                                                                         |
+| - `meta.tex`          | Metadaten des Dokuments      | Hier wird hauptsächlichder Inhalt des Deckblatts festgelegt.                                                              |
+| - `natbib.cfg`        | Style von Literaturangaben   | Diese Datei muss im selben Verzeichnis liegen wie `bibliography.bib`.                                                     |
+| - `root.tex`          | Dokumentenstamm              | Hier wird die Struktur des Dokuments festgelegt und alle Bestandteile geladen. Diese Datei sollte nicht umbenannt werden. |
 
 Der Build wird automatisch gestartet, wenn eine `.tex`-Datei gespeichert wird. Alternativ kann der Build über `Seitenmenü > LaTeX > Build LaTeX project` gestartet werden. Die erzeugte PDF-Datei wird unter `out/root.pdf` abgelegt. Es wird empfohlen den Dateinamen der PDF-Datei vor Auslieferung entsprechend dem Titel und/oder Untertitel des Dokuments anzupassen. Alle übrigen Dateien und Ordner in `out/` sind temporär und können ohne Bedenken gelöscht werden.
 
