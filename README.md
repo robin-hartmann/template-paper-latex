@@ -79,7 +79,7 @@ Dies bedeutet, dass der verwendete Formatierer `latexindent` nur in Form einer P
 4. `where latexindent.exe` ausführen
 5. Falls ein Pfad ausgegeben wird, die Datei unter diesem Pfad löschen
 6. Schritte 3-5 wiederholen, bis kein Pfad mehr ausgegeben wird
-7. Das `latexindent` Paket von [CTAN](https://ctan.org/tex-archive/support/latexindent) herunterladen
+7. Das Paket `latexindent` von [CTAN](https://ctan.org/tex-archive/support/latexindent) herunterladen
 8. Die heruntergeladene Zip-Datei in einen beliebigen Ordner entpacken
 9. Diesen Ordner zum `PATH` hinzufügen
 10. Alle Fenster von VS Code schließen und erneut öffnen
