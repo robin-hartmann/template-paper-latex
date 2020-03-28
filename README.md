@@ -122,7 +122,7 @@ Dies ist normal wenn MiKTeX verwendet wird, denn es müssen erst einmal alle ben
 
 ## 📃 Lizenz
 
-Dieses Projekt ist lizenziert unter der `Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International (CC BY-SA 4.0)` Lizenz - siehe [LICENSE.md](LICENSE.md) Datei für Details.
+Dieses Projekt ist lizenziert unter der `Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International (CC BY-SA 4.0)` Lizenz - siehe [LICENSE.md](LICENSE.md)-Datei für Details.
 
 ## 👍 Danksagungen
 
