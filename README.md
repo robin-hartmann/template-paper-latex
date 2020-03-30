@@ -29,11 +29,11 @@ Folgen Sie diesen Anweisungen, um dieses Projekt auf Ihrem lokalen Rechner einzu
 
 ### 📋 Voraussetzungen
 
-- LaTeX Distribution
-  - bspw. [MiKTeX](https://miktex.org/howto/install-miktex)
-- Perl Distribution
-  - bspw. [ActivePerl](https://www.activestate.com/products/perl/downloads/)
-    - Stellen Sie sicher, dass der Installer den Ordner mit den Executables zum `PATH` hinzufügt
+- [MiKTeX](https://miktex.org/howto/install-miktex) - Free distribution of the TeX/LaTeX typesetting system for Microsoft Windows
+  - Diese Anleitung geht davon aus, dass Sie MiKTeX verwenden, aber Sie können auch eine andere LaTeX Distribution wählen
+- [ActivePerl](https://www.activestate.com/products/perl/downloads/) - Support your mission-critical applications with the world’s most trusted Perl distribution
+  - Diese Anleitung geht davon aus, dass Sie ActivePerl verwenden, aber Sie können auch eine andere Perl Distribution wählen
+  - Stellen Sie sicher, dass der Installer den Ordner mit den Executables zum `PATH` hinzufügt
 - [Visual Studio Code](https://code.visualstudio.com/) mit der Erweiterung [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
 ### 🚀 Schnellstart
@@ -75,8 +75,8 @@ Dies bedeutet, dass der verwendete Formatierer `latexindent` nur in Form einer P
 
 1. MiKTeX Console öffnen
 2. Unter `Packages` das Paket `latexindent` deinstallieren
-3. Eingabeaufforderung öffnen
-4. `where latexindent.exe` ausführen
+3. Terminal öffnen
+4. `where.exe latexindent.exe` ausführen
 5. Falls ein Pfad ausgegeben wird, die Datei unter diesem Pfad löschen
 6. Schritte 3-5 wiederholen, bis kein Pfad mehr ausgegeben wird
 7. Das Paket `latexindent` von [CTAN](https://ctan.org/tex-archive/support/latexindent) herunterladen
