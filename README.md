@@ -29,9 +29,9 @@ Folgen Sie diesen Anweisungen, um dieses Projekt auf Ihrem lokalen Rechner einzu
 
 ### 📋 Voraussetzungen
 
-- [MiKTeX](https://miktex.org/howto/install-miktex) - Free distribution of the TeX/LaTeX typesetting system for Microsoft Windows
+- [MiKTeX](https://miktex.org/howto/install-miktex)
   - Diese Anleitung geht davon aus, dass Sie MiKTeX verwenden, aber Sie können auch eine andere LaTeX Distribution wählen
-- [ActivePerl](https://www.activestate.com/products/perl/downloads/) - Support your mission-critical applications with the world’s most trusted Perl distribution
+- [ActivePerl](https://www.activestate.com/products/perl/downloads/)
   - Diese Anleitung geht davon aus, dass Sie ActivePerl verwenden, aber Sie können auch eine andere Perl Distribution wählen
   - Stellen Sie sicher, dass der Installer den Ordner mit den Executables zum `PATH` hinzufügt
 - [Visual Studio Code](https://code.visualstudio.com/) mit der Erweiterung [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
