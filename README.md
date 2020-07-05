@@ -59,7 +59,7 @@ Folgen Sie diesen Anweisungen, um dieses Projekt auf Ihrem lokalen Rechner einzu
 | - `bibliography.bib`  | Literaturangaben             | Hier wird die verwendete Literatur angegeben.                                                                             |
 | - `content.tex`       | Ausarbeitung                 | Hier wird der Inhalt der Ausarbeitung festgelegt.                                                                         |
 | - `hyphenation.tex`   | Silbentrennung               | Hier werden Regeln für Silbentrennung festgelegt.                                                                         |
-| - `meta.tex`          | Metadaten des Dokuments      | Hier wird hauptsächlichder Inhalt des Deckblatts festgelegt.                                                              |
+| - `meta.tex`          | Metadaten des Dokuments      | Hier wird hauptsächlich der Inhalt des Deckblatts festgelegt.                                                              |
 | - `natbib.cfg`        | Style von Literaturangaben   | Diese Datei muss im selben Verzeichnis liegen wie `bibliography.bib`.                                                     |
 | - `root.tex`          | Dokumentenstamm              | Hier wird die Struktur des Dokuments festgelegt und alle Bestandteile geladen. Diese Datei sollte nicht umbenannt werden. |
 
